@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="DefaultMember.master.cs" Inherits="PRGGroupProject.DefaultMember" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>GroupProject</title>
+    <link href="MyStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style3 {
+            width: 1097px;
+        }
+        .auto-style4 {
+            width: 33px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+            <tr>
+            <td class="auto-style4">
+                <img src="Images/Inti%20Photography%20Club.png" height="100" width="100"/>
+            </td>
+            <td class="auto-style3"><h1>PhotographyClub</h1></td>
+            <td>Welcome, <%=Session["UserName"].ToString() %>!
+            </td>
+            <td>
+                <asp:HyperLink ID="hlLogout" runat="server" NavigateUrl="~/Logout.aspx" Visible="False">Logout</asp:HyperLink>
+            </td>
+        </tr>
+            <tr>
+            <td class="auto-style4">
+                <a href="Blog.aspx">Blog</a><br />
+                <a href="Events.aspx">Events</a><br />
+                <a href="Support.aspx">Support</a><br />
+                <a href="EditUsers.aspx">Edit Profile</a><br />
+            </td>
+            <td colspan="3" rowspan="2">
+                <asp:ContentPlaceHolder 
+                    ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
